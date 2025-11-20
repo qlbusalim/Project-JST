@@ -1,0 +1,30 @@
+# Generated from the provided conda env "tf-audio-gpu"
+# Notes:
+# - CUDA (cudatoolkit=11.2) and cuDNN (8.1) are NOT installable via pip; install them via conda or your system package manager:
+#     conda install -c conda-forge cudatoolkit=11.2 cudnn=8.1
+# - GPU-enabled PyTorch/torchaudio often require installing the correct wheel from https://pytorch.org/ to match your CUDA.
+# - tensorflow-gpu is listed historically for older TF releases; tensorflow==2.10.1 can be used for GPU if your CUDA/cuDNN match.
+# - If you plan to reproduce the conda environment exactly, prefer using the original YAML with conda/conda-forge.
+
+numpy==1.26.4
+scipy==1.11.3
+librosa==0.10.1
+scikit-learn==1.3.2
+matplotlib
+pandas
+jupyterlab
+tqdm
+ipywidgets
+
+# pip-only packages (from provided YAML)
+tensorflow==2.10.1
+# tensorflow-gpu==2.10.1    # optional; uncomment if you specifically need the separate package
+audiomentations==0.36.0
+soundfile==0.12.1
+
+# PyTorch and related - prefer installing from PyTorch website to ensure correct CUDA compatibility:
+# Example (change cudatoolkit/cuda version as needed):
+#   pip3 install --index-url https://download.pytorch.org/whl/cu118 torch==2.3.0 torchaudio==2.3.0
+torch==2.3.0
+torchaudio==2.3.0
+torch_audiomentations==0.11.0
